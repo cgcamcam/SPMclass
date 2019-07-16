@@ -9,41 +9,41 @@ namespace SPM
     class Program
     {
         static List<Project> listOfProjects = new List<Project>();
-   
+
         static void Main(string[] args)
         {
-            Project x = CreateNewProject();
-            Project y = CreateNewProject();
-            PrintListProjects(listOfProjects);
-            
+            CreateNewProject();
+            CreateNewProject();
+            //PrintListProjects(listOfProjects);
+
             Console.ReadLine();
-           
-            
+
+
         }
 
-        static Project CreateNewProject()
+        static void CreateNewProject()
         {
 
             Console.WriteLine("Create a new project");
             Console.WriteLine("Enter Project Name");
             string a = Console.ReadLine();
-            Console.WriteLine("Enter Desc");
+            Console.WriteLine("Enter Owner");
             string b = Console.ReadLine();
-            Console.WriteLine("Enter owner name");
-            string c = Console.ReadLine();
-
-            Project newProj = new Project(a, b, c);
+            //Console.WriteLine("Enter owner name");
+            //string c = Console.ReadLine();
+           
+            Project newProj = new Project(a, b);
             listOfProjects.Add(newProj);
-            return newProj;
+             
 
         }
 
-        static void PrintListProjects(List<Project> listOfProjects)
+        static void PrintListProjects(string name, string owner)
 
         {
             foreach (Project p in listOfProjects)
             {
-                Console.WriteLine("{0} {1} {2}", );
+                Console.WriteLine("{0} {1}", p.projName, p.owner); //why are these null?
             }
         }
 
