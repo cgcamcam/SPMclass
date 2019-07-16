@@ -1,4 +1,3 @@
-//main class
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,7 @@ namespace SPM
         {
             CreateNewProject();
             CreateNewProject();
-            PrintListProjects(listOfProjects);
+            //PrintListProjects(listOfProjects);
 
             Console.ReadLine();
 
@@ -28,23 +27,23 @@ namespace SPM
             Console.WriteLine("Create a new project");
             Console.WriteLine("Enter Project Name");
             string a = Console.ReadLine();
-            Console.WriteLine("Enter Desc");
+            Console.WriteLine("Enter Owner");
             string b = Console.ReadLine();
-            Console.WriteLine("Enter owner name");
-            string c = Console.ReadLine();
-
-            Project newProj = new Project(a, b, c);
+            //Console.WriteLine("Enter owner name");
+            //string c = Console.ReadLine();
+           
+            Project newProj = new Project(a, b);
             listOfProjects.Add(newProj);
              
 
         }
 
-        static void PrintListProjects(List<Project> listOfProjects)
+        static void PrintListProjects(string name, string owner)
 
         {
             foreach (Project p in listOfProjects)
             {
-                Console.WriteLine( p.projName, p.desc, p.owner); //why are these null?
+                Console.WriteLine("{0} {1}", p.projName, p.owner); //why are these null?
             }
         }
 
