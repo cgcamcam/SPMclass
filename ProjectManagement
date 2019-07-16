@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProjectMonitoring
+{
+
+    public class HoursObject
+    {
+        private DateTime date;
+        public double hoursSpent
+        { get { return hoursSpent; }
+            set { hoursSpent = value; } }
+
+
+        public HoursObject (DateTime theDate, double thehours)
+        {
+            date = theDate;
+            hoursSpent = thehours;            
+        }
+
+
+      
+    }
+   public class ProjectMonitoring 
+    {
+        private List <object> recordedDayHours;
+        public double dayHours;
+        public double hourTotal;
+        private string projName;
+          public ProjectMonitoring()
+    {
+            recordedDayHours = new List<object>();
+    }
+        public void AddHours (double hours)
+        {
+            HoursObject next = new HoursObject(DateTime.Now, hours);
+            recordedDayHours.Add(next);
+        }
+
+        public double TotalHours ()
+        {
+            hourTotal = 0;
+            int arrayCount = recordedDayHours.Count - 1;
+            object[] countHours = new object[arrayCount];
+            for (int j =0; j < arrayCount; j++)
+            {
+                countHours[j] = recordedDayHours[j];
+            }
+            double h = 0;
+            foreach (object HoursObject in countHours)
+            {
+                h +=
+            }
+            return hourTotal;
+        }
+
+    }
+
+  
+
+}
