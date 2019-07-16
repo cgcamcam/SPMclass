@@ -6,15 +6,15 @@ using System.Text;
 
 public class Project
 {
-    //private static string projectName, description, owner;
+    public string description;
     public static List<string> teamMembers = new List<string>();
 
-    public Project(string projectName, string description, string ownerName) //constructor , List<string> teamMembers
+    public Project(string projectName, string ownerName ) //constructor , List<string> teamMembers
     {
         string projName = projectName;
         string owner = ownerName;
         string desc = description;
-        //List<string> members = teamMembers;
+        List<string> members = teamMembers;
 
     }
 
@@ -34,6 +34,12 @@ public class Project
     {
         get;
          set;
+    }
+
+    public List<string>members
+    {
+        get;
+        set;
     }
 
     static void AddTeamMembers(List<string> teamMembers)
