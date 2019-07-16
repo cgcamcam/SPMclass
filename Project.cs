@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,7 +6,7 @@ using System.Text;
 
 public class Project
 {
-    private static string projectName, description, owner;
+    //private static string projectName, description, owner;
     public static List<string> teamMembers = new List<string>();
 
     public Project(string projectName, string description, string ownerName) //constructor , List<string> teamMembers
@@ -18,15 +18,27 @@ public class Project
 
     }
 
-    // public string projectName
-    //{
-    //    get => projectName;
-    //    set
-    //}
-    
+    public string projName
+    {
+        get;
+         set;
+    }
+
+    public string desc
+    {
+        get;
+         set;
+    }
+
+    public string owner
+    {
+        get;
+         set;
+    }
+
     static void AddTeamMembers(List<string> teamMembers)
     {
-        
+
         Console.WriteLine("Enter new members");
         string newMember = Console.ReadLine();
         teamMembers.Add(newMember);

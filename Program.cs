@@ -1,4 +1,5 @@
-﻿using System;
+//main class
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,19 +10,19 @@ namespace SPM
     class Program
     {
         static List<Project> listOfProjects = new List<Project>();
-   
+
         static void Main(string[] args)
         {
-            Project x = CreateNewProject();
-            Project y = CreateNewProject();
+            CreateNewProject();
+            CreateNewProject();
             PrintListProjects(listOfProjects);
-            
+
             Console.ReadLine();
-           
-            
+
+
         }
 
-        static Project CreateNewProject()
+        static void CreateNewProject()
         {
 
             Console.WriteLine("Create a new project");
@@ -34,7 +35,7 @@ namespace SPM
 
             Project newProj = new Project(a, b, c);
             listOfProjects.Add(newProj);
-            return newProj;
+             
 
         }
 
@@ -43,7 +44,7 @@ namespace SPM
         {
             foreach (Project p in listOfProjects)
             {
-                Console.WriteLine("{0} {1} {2}", );
+                Console.WriteLine( p.projName, p.desc, p.owner); //why are these null?
             }
         }
 
