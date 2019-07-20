@@ -1,0 +1,46 @@
+using System;
+
+public class Risk
+{
+
+    public string riskName
+    {
+        get { return riskName; }
+        
+    }
+
+    public string riskStatus 
+    {
+        get { return riskStatus; }
+        set { riskStatus = value; }
+    }
+
+    public int riskLevel
+    {
+        get { return riskLevel; }
+        set { riskLevel = value;  }
+    }
+
+
+	public Risk(string name, stinrg status, int level)
+	{
+        riskName = name;
+        riskStatus = status;
+        riskLevel = level;
+	}
+
+    public void UpdateStatus (string newStatus)
+    {
+        riskStatus = newStatus;
+    }
+
+    public void UpdateLevel (int newLevel)
+    {
+        riskLevel = newLevel;
+    }
+
+    public override string ToString()
+    {
+        return riskName + "\nStatus: " + riskStatus + "\nLevel " + riskLevel;
+    }
+}
